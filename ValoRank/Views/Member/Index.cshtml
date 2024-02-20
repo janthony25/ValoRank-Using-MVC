@@ -42,7 +42,8 @@
                 </td>
                 <td>
                     <div class="w-75 btn-group" role="group" >
-                        <a class="text-primary" asp-controller="Member" asp-action="Edit" asp-route-id="@obj.ID">Edit Member</a>
+                        <a class="btn btn-primary" asp-controller="Member" asp-action="Edit" asp-route-id="@obj.ID">Edit Member</a>
+                         <a class="btn btn-danger" asp-controller="Member" asp-action="Delete" asp-route-id="@obj.ID">Remove Member</a>
                     </div>
                 </td>
 
