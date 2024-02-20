@@ -22,6 +22,9 @@
             <th class="text-white">
                     Tag Number
                 </th>
+                <th>
+
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -36,6 +39,11 @@
                 </td>
                 <td class="text-white">
                     @obj.TagNo
+                </td>
+                <td>
+                    <div class="w-75 btn-group" role="group" >
+                        <a class="text-primary" asp-controller="Member" asp-action="Edit" asp-route-id="@obj.ID">Edit Member</a>
+                    </div>
                 </td>
 
             </tr>

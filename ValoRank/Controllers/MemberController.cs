@@ -35,5 +35,28 @@ namespace ValoRank.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        // GET
+        public IActionResult Edit(int? id)
+        {
+            if(id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var obj = _db.Members.Find(id);
+            return View(obj);
+        }
+
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Member obj)
+        {
+            _db.Members.Update(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
     }
 }
