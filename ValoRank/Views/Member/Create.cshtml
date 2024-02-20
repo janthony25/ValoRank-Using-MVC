@@ -1,0 +1,22 @@
+﻿@model Member
+
+<form method="post">
+    <div class="container p-4">
+        <h2 class="text-primary">Add New Member</h2>
+        <div class="mb-2">
+            <label asp-for="IGN"></label>
+            <input asp-for="IGN" class="form-control" />
+        </div>
+        <div class="mb-2">
+            <label asp-for="Rank"></label>
+            <input asp-for="Rank" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="TagNo"></label>
+            <input asp-for="TagNo" class="form-control" />
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:150px">Add Member</button>
+        <a class="btn btn-secondary" asp-controller="Member" asp-action="Index" style="width:150px">Back to Members</a>
+    </div>
+
+</form>

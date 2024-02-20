@@ -15,9 +15,25 @@ namespace ValoRank.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Member> members = _db.Members;
+            IEnumerable<Member> obj = _db.Members;
 
-            return View(members);
+            return View(obj);
+        }
+
+        // GET
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Member obj)
+        {
+            _db.Members.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
