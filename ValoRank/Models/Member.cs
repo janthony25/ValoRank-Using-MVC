@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace ValoRank.Models
 {
@@ -9,6 +10,7 @@ namespace ValoRank.Models
         [Required]
         public string IGN { get; set; }
         public string Rank { get; set; }
+        [DisplayName("Tag Number")]
         public int TagNo { get; set; }
     }
 }

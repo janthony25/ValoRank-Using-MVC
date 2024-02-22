@@ -6,14 +6,17 @@
         <div class="mb-2">
             <label asp-for="IGN"></label>
             <input asp-for="IGN" class="form-control" />
+            <span asp-validation-for="IGN"></span>
         </div>
         <div class="mb-2">
             <label asp-for="Rank"></label>
             <input asp-for="Rank" class="form-control" />
+            <span asp-validation-for="Rank"></span>
         </div>
         <div class="mb-3">
             <label asp-for="TagNo"></label>
             <input asp-for="TagNo" class="form-control" />
+            <span asp-validation-for="TagNo"></span>
         </div>
         <button class="btn btn-primary" type="submit" style="width:150px">Add Member</button>
         <a class="btn btn-secondary" asp-controller="Member" asp-action="Index" style="width:150px">Back to Members</a>
@@ -21,9 +24,8 @@
 
 </form>
 
-@section Script{
+@section Scripts {
     @{
-        <partial name="_ValidationScriptsPartials" />
+        <partial name="_ValidationScriptsPartial" />
     }
-    
 }

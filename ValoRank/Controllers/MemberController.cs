@@ -33,6 +33,7 @@ namespace ValoRank.Controllers
         {
             _db.Members.Add(obj);
             _db.SaveChanges();
+            TempData["success"] = "Member added successfully";
             return RedirectToAction("Index");
         }
 
@@ -54,6 +55,7 @@ namespace ValoRank.Controllers
         {
             _db.Members.Update(obj);
             _db.SaveChanges();
+            TempData["success"] = "Member edited successfully";
             return RedirectToAction("Index");
         }
 
@@ -81,6 +83,7 @@ namespace ValoRank.Controllers
 
             _db.Members.Remove(obj);
             _db.SaveChanges();
+            TempData["success"] = "Member has been removed";
             return RedirectToAction("Index");
         }
 
